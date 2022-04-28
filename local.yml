@@ -1,0 +1,35 @@
+#Basic Setup role runs and does all the basics we expect like updating package cache,
+#upgrading the system, and setting up our users with their config files
+- hosts: all
+  tags: basic-setup
+  become: true
+  roles:
+    - basic-setup
+
+#Laptop configuration configures all hosts set to laptop as laptops
+- hosts: laptop
+  tags: laptop
+  become: true
+  roles:
+    - laptop
+ 
+#Laptop configuration configures all hosts set to desktop as desktops
+- hosts: desktop
+  tags: desktop
+  become: true
+  roles:
+    - desktop
+ 
+#Laptop configuration configures all hosts set to server as servers
+- hosts: server
+  tags: server
+  become: true
+  roles:
+    - server
+      
+#After running all roles, run cleanup
+- hosts: all
+  tags: cleanup
+  become: true
+  roles:
+    - cleanup

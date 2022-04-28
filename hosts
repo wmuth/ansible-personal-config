@@ -1,3 +1,4 @@
+#File where we can specifiy which hosts should take which roles
 #To run a certain role on your local system simply add localhost to one of the role-headers
 
 [laptop]
