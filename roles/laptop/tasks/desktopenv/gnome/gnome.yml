@@ -1,5 +1,4 @@
 - name: Install Fira Code
-  become_user: will
   package:
     name: ttf-fira-code
     state: latest
