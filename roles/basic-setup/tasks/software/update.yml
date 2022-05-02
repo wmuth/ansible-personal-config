@@ -1,5 +1,5 @@
 - name: List mirrors by speed (Manjaro)
-  command: sudo pacman-mirrors --fasttrack
+  command: pacman-mirrors --fasttrack
   #when: ansible_distribution in ["Manjaro Linux"]
 
 - name: Update repos and upgrade system (Manjaro)
