@@ -1,0 +1,22 @@
+- name: Edu-Roam Reminder
+  copy:
+    dest: "/home/will/edu-roam-reminder"
+    content:
+      "setup edu roam kth"
+
+- name: Grab auto-cpufreq and reminder
+  git:
+    repo: "https://github.com/AdnanHodzic/auto-cpufreq.git"
+    dest: "/home/will/auto-cpufreq"
+  copy:
+    dest: "home/will/auto-cpufreq-reminder"
+    content:
+      "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
+
+- name: Disable bluetooth on startup
+  service:
+    name: bluetooth
+    enabled: no
+
+# theme installed programs
+# terminator, gnome terminal, code

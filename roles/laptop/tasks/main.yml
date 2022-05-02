@@ -7,5 +7,8 @@
 # Install software
 - import_tasks: software/install.yml
 
+# Remove software
+- import_tasks: software/remove.yml
+
 # Perform rest of system setup
 - import_tasks: setup/setup.yml

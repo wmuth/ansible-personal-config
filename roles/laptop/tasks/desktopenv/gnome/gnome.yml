@@ -1,0 +1,62 @@
+- name: Install Fira Code
+  become_user: will
+  package:
+    name: ttf-fira-code
+    state: latest
+
+- name: Refresh Fonts
+  command: fc-cache -fv
+
+- name: Set Fira Font
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - { key: "/org/gnome/desktop/interface/font-name", value: 'Fira Code 10' }
+    - { key: "/org/gnome/desktop/interface/document-font-name", value: 'Fira Code 11' }
+    - { key: "/org/gnome/desktop/interface/monospace-font-name", value: 'Fira Code 11' }
+
+- name: Speed up key repeat delay and speed
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - { key:"/org/gnome/desktop/peripherals/keyboard/delay", value: uint32 300 }
+    - { key:"/org/gnome/desktop/peripherals/keyboard/repeat-interval", value: uint32 20 }
+
+- name: Keybinding location
+  become_user: will
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+
+- name: Printscreen hotkeys
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value}}"
+  with_items:
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/area-screenshot", value: ['<Shift>Print'] }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/area-screenshot-clip", value: ['Print'] }
+
+- name: Files hotkey
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value}}"
+  with_items:
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: '<Super>e' }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: '/usr/bin/nautilus' }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: 'Files' }
+
+- name: Terminator hotkey
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value}}"
+  with_items:
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: '<Primary><Alt>t' }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: '/usr/bin/terminator' }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: 'Terminator' }
