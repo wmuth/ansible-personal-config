@@ -11,11 +11,11 @@
 
 - name: Check swap file no double make
   command: file /sawpfile
-  register: swapfile-out
+  register: swapfile
 
 - name: Make swap
   command: mkswap /swapfile
-  when: swapfile-out.stdout.find('swap file') == -1
+  when: swapfile.stdout.find('swap file') == -1
 
 - name: Write swap in fstab
   lineinfile:
