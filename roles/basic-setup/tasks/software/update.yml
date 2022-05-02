@@ -1,5 +1,5 @@
 - name: List mirrors by speed (Manjaro)
-  command: pacman-mirrors --continent && pacman -Syyu
+  command: pacman-mirrors --continent
   #when: ansible_distribution in ["Manjaro Linux"]
 
 - name: Update repos and upgrade system (Manjaro)
