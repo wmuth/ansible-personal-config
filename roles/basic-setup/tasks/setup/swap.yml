@@ -1,6 +1,6 @@
 - name: Create swap file, if doesn't exist using creates
   command: dd if=/dev/zero of=/swapfile bs=1024 count=4096k
-           creates= /swapfile
+           creates=/swapfile
 
 - name: Correct swap permissions
   file:
@@ -9,9 +9,13 @@
     group: root
     mode: 0600
 
+- name: Check swap file no double make
+  command: file /sawpfile
+  register: swapfile-out
+
 - name: Make swap
-  command: sudo mkswap /swapfile
-  when: swapfile.stdout.find('swap file') == -1
+  command: mkswap /swapfile
+  when: swapfile-out.stdout.find('swap file') == -1
 
 - name: Write swap in fstab
   lineinfile:
@@ -21,6 +25,7 @@
 
 - name: Swapon
   command: swapon /swapfile
+  when: ansible_sawptotal_mb < 1
 
 - name: debug add reminder check
   copy:
