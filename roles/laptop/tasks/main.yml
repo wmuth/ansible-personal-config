@@ -2,7 +2,7 @@
 
 # Desktop Environments
 - import_tasks: desktopenv/gnome/gnome.yml
-  when: gnome == true
+  #when: gnome == true
 
 # Install software
 - import_tasks: software/install.yml
