@@ -25,7 +25,7 @@
 
 - name: Swapon
   command: swapon /swapfile
-  when: ansible_sawptotal_mb < 1
+  when: ansible_swaptotal_mb < 1
 
 - name: debug add reminder check
   copy:
