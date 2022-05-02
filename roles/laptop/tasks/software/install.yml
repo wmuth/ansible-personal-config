@@ -81,3 +81,8 @@
   package:
     name: ranger
     state: latest
+
+- name: Install Make
+  package:
+    name: ranger
+    state: latest
