@@ -46,12 +46,12 @@
     content:
       "setup timeshift"
 
-- name: Install terminator
+- name: Install Terminator
   package:
     name: terminator
     state: latest
 
-- name: Install texmaker
+- name: Install Texmaker
   package:
     name: texmaker
     state: latest
