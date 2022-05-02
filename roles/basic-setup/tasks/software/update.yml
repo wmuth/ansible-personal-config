@@ -1,0 +1,9 @@
+- name: List mirrors by speed (Manjaro)
+    command: sudo pacman-mirrors --fasttrack
+    when: ansible_distribution == "ArchLinux"
+
+- name: Update repos and upgrade system (Manjaro)
+    pacman:
+      update_cache: yes
+      upgrade: yes
+    when: ansible_distribution == "ArchLinux"

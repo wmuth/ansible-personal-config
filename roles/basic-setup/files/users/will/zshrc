@@ -1,0 +1,44 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+# Nvim editor not nano
+export EDITOR=/usr/bin/nvim
+# aliases neovim
+alias vim="nvim"
+alias vi="nvim"
+
+# alias for virtual machine folder share
+alias w10s="virt-viewer --connect=qemu:///system --domain-name Win10"
+
+# alias for anki that isn't blank
+alias anki="anki --no-sandbox"
+
+# alias for modern versions
+alias ls="exa"
+alias cat="bat"
+alias grep="rg"
+alias du="dust"
+alias df="duf"
+alias tree="br"
+alias find="fd"
+alias htop="btm"
+alias top="btm"
+alias ping="gping"
+alias ps="procs"
+alias cd="z"
+
+# other code for modern versions
+eval "$(mcfly init zsh)"
+eval "$(zoxide init zsh)"
+source /home/will/.config/broot/launcher/bash/br
+
+# run neofetch on terminal start
+neofetch

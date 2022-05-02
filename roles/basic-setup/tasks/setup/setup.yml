@@ -1,0 +1,8 @@
+- name: Create reminder for debugging
+  copy:
+    dest: /home/will/reminder-clock.txt
+    content:
+      "systemctl check systemd-timesyncd running and starting automatically"
+
+# Add Swapfile
+- import_tasks: swap.yml
