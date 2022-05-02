@@ -17,7 +17,7 @@
     - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Fira Code 11'" }
 
 - name: Speed up key repeat delay and speed
-  become_user: willC
+  become_user: will
   dconf:
     key: "{{ item.key }}"
     value: "{{ item.value }}"
