@@ -9,9 +9,9 @@
     repo: "https://github.com/AdnanHodzic/auto-cpufreq.git"
     dest: "/home/will/auto-cpufreq"
 
-- name: Auot-cpufreq reminder
+- name: Auto-cpufreq reminder
   copy:
-    dest: "home/will/auto-cpufreq-reminder"
+    dest: "/home/will/auto-cpufreq-reminder"
     content:
       "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
 
