@@ -35,10 +35,12 @@
     content:
       "Setup deja dup backup"
 
-- name: Install timeshift
+- name: Install Timeshift
   package:
     name: timeshift
     state: latest
+
+- name: Reminder Timeshift
   copy:
     dest: "/home/will/reminder-timeshift"
     content:
