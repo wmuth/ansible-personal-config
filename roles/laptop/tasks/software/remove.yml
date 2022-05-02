@@ -1,19 +1,19 @@
-- name: Remove htop
+- name: Remove Htop
   package:
     name: htop
     state: absent
 
-- name: Remove lollypop
+- name: Remove Lollypop
   package:
     name: lollypop
     state: absent
 
-- name: Remove totem
+- name: Remove Totem
   package:
     name: totem
     state: absent
 
-- name: Remove gthumb
+- name: Remove Gthumb
   package:
     name: gthumb
     state: absent
