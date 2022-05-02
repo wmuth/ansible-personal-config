@@ -1,0 +1,92 @@
+#Firefox
+- name: Install Firefox
+  package:
+    name: firefox
+    state: latest
+
+#Chromium
+- name: Install Chromium
+  package:
+    name: chromium
+    state: latest
+
+#Bitwarden
+- name: Install Bitwarden
+  package:
+    name: bitwarden
+    state: latest
+
+#Celluloid
+- name: Install Celluloid
+  package:
+    name: celluloid
+    state: latest
+
+#Code OSS (eventually fix extras)
+- name: Install Code OSS
+  package:
+    name: code
+    state: latest
+
+#Deja Dup
+- name: Install Deja Dup Backups
+  package:
+    name: deja-dup
+    state: latest
+  copy:
+    dest: "/home/will/reminder-dejadup"
+    content:
+      "Setup deja dup backup"
+
+#Timeshift
+- name: Install timeshift
+  package:
+    name: timeshift
+    state: latest
+  copy:
+    dest: "/home/will/reminder-timeshift"
+    content:
+      "setup timeshift"
+
+#Terminator
+- name: Install terminator
+  package:
+    name: terminator
+    state: latest
+
+#Texmaker
+- name: Install texmaker
+  package:
+    name: texmaker
+    state: latest
+
+#Libre Office
+- name: Install Libre Office
+  package:
+    name: libreoffice
+    state: latest
+
+#Anki text reminder in home
+- name: Anki text reminder
+  copy:
+    dest: "/home/will/reminder-anki"
+    content:
+      "fix anki and remember --nosandbox but should be zsh aliased already"
+
+#yt-dlp
+- name: Install yt-dlp
+  package:
+    name: yt-dlp
+    state: latest
+
+#eye of gnome
+- name: Install Eye of Gnome
+  package:
+    name: eog
+    state: latest
+
+#ranger
+- name: Install Ranger
+  package:
+    name: ranger
+    state: latest
