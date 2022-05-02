@@ -46,9 +46,9 @@
     key: "{{ item.key }}"
     value: "{{ item.value}}"
   with_items:
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "<Super>e" }
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "/usr/bin/nautilus" }
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "Files" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>e'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'/usr/bin/nautilus'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Files'" }
 
 - name: Terminator hotkey
   become_user: will
@@ -56,9 +56,9 @@
     key: "{{ item.key }}"
     value: "{{ item.value}}"
   with_items:
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "<Primary><Alt>t" }
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "/usr/bin/terminator" }
-    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "Terminator" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Primary><Alt>t'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'/usr/bin/terminator'" }
+    - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Terminator'" }
 
 - name: Caps becomes ctrl (vim)
   become_user: will
