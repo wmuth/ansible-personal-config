@@ -11,6 +11,7 @@
   dconf:
     key: "{{ item.key }}"
     value: "{{ item.value }}"
+    state: present
   with_items:
     - { key: "/org/gnome/desktop/interface/font-name", value: 'Fira Code 10' }
     - { key: "/org/gnome/desktop/interface/document-font-name", value: 'Fira Code 11' }
