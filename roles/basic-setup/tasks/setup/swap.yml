@@ -26,9 +26,3 @@
 - name: Swapon
   command: swapon /swapfile
   when: ansible_swaptotal_mb < 1
-
-- name: debug add reminder check
-  copy:
-    dest: /home/will/reminder-sawp.txt
-    content:
-      "check that swap exists"
