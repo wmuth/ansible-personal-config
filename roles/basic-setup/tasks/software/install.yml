@@ -1,21 +1,21 @@
 - name: Install my utilities
-    package:
-    state: latest
-    name:
-      - neofetch
-      - neovim
-      - tmux
-      - ncdu
-      - trash-cli
-      - exa-cli
-      - bat
-      - ripgrep
-      - dust
-      - duf
-      - broot
-      - fd
-      - bottom
-      - sd
-      - tealdeer
-      - gping
-      - procs
+  package:
+  state: latest
+  name:
+    - neofetch
+    - neovim
+    - tmux
+    - ncdu
+    - trash-cli
+    - exa-cli
+    - bat
+    - ripgrep
+    - dust
+    - duf
+    - broot
+    - fd
+    - bottom
+    - sd
+    - tealdeer
+    - gping
+    - procs
