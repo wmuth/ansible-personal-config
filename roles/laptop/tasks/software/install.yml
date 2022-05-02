@@ -28,6 +28,8 @@
   package:
     name: deja-dup
     state: latest
+
+- name: Reminder Deja Dup
   copy:
     dest: "/home/will/reminder-dejadup"
     content:
