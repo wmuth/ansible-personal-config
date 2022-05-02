@@ -7,7 +7,7 @@
       - tmux
       - ncdu
       - trash-cli
-      - exa-cli
+      - exa
       - bat
       - ripgrep
       - dust
