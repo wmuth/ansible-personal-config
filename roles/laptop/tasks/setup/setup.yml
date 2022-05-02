@@ -4,10 +4,12 @@
     content:
       "setup edu roam kth"
 
-- name: Grab auto-cpufreq and reminder
+- name: Grab auto-cpufreq
   git:
     repo: "https://github.com/AdnanHodzic/auto-cpufreq.git"
     dest: "/home/will/auto-cpufreq"
+
+- name: Auot-cpufreq reminder
   copy:
     dest: "home/will/auto-cpufreq-reminder"
     content:
