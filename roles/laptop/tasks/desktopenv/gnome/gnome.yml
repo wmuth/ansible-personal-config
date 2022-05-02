@@ -22,8 +22,8 @@
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - { key:"/org/gnome/desktop/peripherals/keyboard/delay", value: "uint32 300" }
-    - { key:"/org/gnome/desktop/peripherals/keyboard/repeat-interval", "value: uint32 20" }
+    - { key: "/org/gnome/desktop/peripherals/keyboard/delay", value: "uint32 300" }
+    - { key: "/org/gnome/desktop/peripherals/keyboard/repeat-interval", value: "uint32 20" }
 
 - name: Keybinding location
   become_user: will
