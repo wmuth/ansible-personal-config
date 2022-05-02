@@ -1,26 +1,26 @@
 - name: Create swap file, if doesn't exist using creates
-    command: dd if=/dev/zero of=/swapfile bs=1024 count=4096k
-             creates= /swapfile
+  command: dd if=/dev/zero of=/swapfile bs=1024 count=4096k
+           creates= /swapfile
 
 - name: Correct swap permissions
-    file:
-      path: /swapfile
-      owner: root
-      group: root
-      mode: 0600
+  file:
+    path: /swapfile
+    owner: root
+    group: root
+    mode: 0600
 
 - name: Make swap
-    command: sudo mkswap /swapfile
-    when: swapfile.stdout.find('swap file') == -1
+  command: sudo mkswap /swapfile
+  when: swapfile.stdout.find('swap file') == -1
 
 - name: Write swap in fstab
-    lineinfile:
-      dest: /etc/fstab
-      regexp: "/swapfile"
-      line: "/swapfile none swap sw 0 0"
+  lineinfile:
+    dest: /etc/fstab
+    regexp: "/swapfile"
+    line: "/swapfile none swap sw 0 0"
 
 - name: Swapon
-    command: swapon /swapfile
+  command: swapon /swapfile
 
 - name: debug add reminder check
   copy:
