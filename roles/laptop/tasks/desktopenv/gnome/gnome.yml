@@ -60,3 +60,9 @@
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: '<Primary><Alt>t' }
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: '/usr/bin/terminator' }
     - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: 'Terminator' }
+
+- name: Caps becomes ctrl (vim)
+  become_user: will
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: ['lv3:ralt_switch', 'caps:ctrl_modifier']
