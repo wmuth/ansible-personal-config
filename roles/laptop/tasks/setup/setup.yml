@@ -1,7 +1,7 @@
 - name: Edu-Roam Reminder
   become_user: will
   lineinfile:
-    path: "/home/will/edu-roam-reminder"
+    path: "/home/will/reminder.txt"
     line: "setup edu roam kth"
     create: yes
 
@@ -13,7 +13,7 @@
 - name: Auto-cpufreq reminder
   become_user: will
   lineinfile:
-    path: "/home/will/auto-cpufreq-reminder"
+    path: "/home/will/reminder.txt"
     line: "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
     create: yes
 

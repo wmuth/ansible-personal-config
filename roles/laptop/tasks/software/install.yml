@@ -32,7 +32,7 @@
 - name: Reminder Deja Dup
   become_user: will
   lineinfile:
-    path: "/home/will/reminder"
+    path: "/home/will/reminder.txt"
     line: "Setup deja dup backup"
     create: yes
 
@@ -44,7 +44,7 @@
 - name: Reminder Timeshift
   become_user: will
   lineinfile:
-    path: "/home/will/reminder-timeshift"
+    path: "/home/will/reminder.txt"
     line: "setup timeshift"
     create: yes
 
@@ -66,7 +66,7 @@
 - name: Anki text reminder
   become_user: will
   lineinfile:
-    path: "/home/will/reminder-anki"
+    path: "/home/will/reminder.txt"
     line: "fix anki and remember --nosandbox but should be zsh aliased already"
     create: yes
 
