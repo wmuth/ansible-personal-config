@@ -1,6 +1,6 @@
 - name: Create swap file, if doesn't exist
   command: dd if=/dev/zero of=/swapfile bs=1024 count=4096k
-  args: creates=/swapfile
+           creates=/swapfile
 
 - name: Correct swap permissions
   file:
