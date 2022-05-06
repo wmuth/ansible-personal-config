@@ -6,7 +6,6 @@
     create: yes
 
 - name: Grab auto-cpufreq
-  become_user: will
   git:
     repo: "https://github.com/AdnanHodzic/auto-cpufreq.git"
     dest: "/home/will/auto-cpufreq"
