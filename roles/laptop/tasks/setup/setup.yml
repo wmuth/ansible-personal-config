@@ -1,19 +1,20 @@
 - name: Edu-Roam Reminder
-  copy:
-    dest: "/home/will/edu-roam-reminder"
-    content:
-      "setup edu roam kth"
+  become_user: will
+  lineinfile:
+    path: "/home/will/edu-roam-reminder"
+    line: "setup edu roam kth"
 
 - name: Grab auto-cpufreq
+  become_user: will
   git:
     repo: "https://github.com/AdnanHodzic/auto-cpufreq.git"
     dest: "/home/will/auto-cpufreq"
 
 - name: Auto-cpufreq reminder
-  copy:
-    dest: "/home/will/auto-cpufreq-reminder"
-    content:
-      "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
+  become_user: will
+  lineinfile:
+    path: "/home/will/auto-cpufreq-reminder"
+    line: "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
 
 - name: Disable bluetooth on startup
   service:

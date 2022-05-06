@@ -30,10 +30,10 @@
     state: latest
 
 - name: Reminder Deja Dup
-  copy:
-    dest: "/home/will/reminder-dejadup"
-    content:
-      "Setup deja dup backup"
+  become_user: will
+  lineinfile:
+    path: "/home/will/reminder"
+    line: "Setup deja dup backup"
 
 - name: Install Timeshift
   package:
@@ -41,10 +41,10 @@
     state: latest
 
 - name: Reminder Timeshift
-  copy:
-    dest: "/home/will/reminder-timeshift"
-    content:
-      "setup timeshift"
+  become_user: will
+  lineinfile:
+    path: "/home/will/reminder-timeshift"
+    line: "setup timeshift"
 
 - name: Install Terminator
   package:
@@ -62,10 +62,10 @@
     state: latest
 
 - name: Anki text reminder
-  copy:
-    dest: "/home/will/reminder-anki"
-    content:
-      "fix anki and remember --nosandbox but should be zsh aliased already"
+  become_user: will
+  lineinfile:
+    path: "/home/will/reminder-anki"
+    line: "fix anki and remember --nosandbox but should be zsh aliased already"
 
 - name: Install yt-dlp
   package:
