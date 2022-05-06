@@ -34,6 +34,7 @@
   lineinfile:
     path: "/home/will/reminder"
     line: "Setup deja dup backup"
+    create: yes
 
 - name: Install Timeshift
   package:
@@ -45,6 +46,7 @@
   lineinfile:
     path: "/home/will/reminder-timeshift"
     line: "setup timeshift"
+    create: yes
 
 - name: Install Terminator
   package:
@@ -66,6 +68,7 @@
   lineinfile:
     path: "/home/will/reminder-anki"
     line: "fix anki and remember --nosandbox but should be zsh aliased already"
+    create: yes
 
 - name: Install yt-dlp
   package:

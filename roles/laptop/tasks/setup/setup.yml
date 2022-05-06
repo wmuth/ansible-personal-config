@@ -3,6 +3,7 @@
   lineinfile:
     path: "/home/will/edu-roam-reminder"
     line: "setup edu roam kth"
+    create: yes
 
 - name: Grab auto-cpufreq
   become_user: will
@@ -15,6 +16,7 @@
   lineinfile:
     path: "/home/will/auto-cpufreq-reminder"
     line: "setup auto cpufreq from the folder by running sudo ./auto-cpufreq-installer"
+    create: yes
 
 - name: Disable bluetooth on startup
   service:
