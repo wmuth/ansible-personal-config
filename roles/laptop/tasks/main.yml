@@ -1,8 +1,6 @@
-# TODO: Make this not be hardcoded for manjaro laptop, this is supposed to work on e.g. Ubuntu server as well, need var file with package names
-
 # Desktop Environments
 - import_tasks: desktopenv/gnome/gnome.yml
-  #when: gnome == true
+  when: gnome is defined and gnome == true
 
 # Install software
 - import_tasks: software/install.yml

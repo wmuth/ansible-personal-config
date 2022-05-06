@@ -15,13 +15,14 @@
   with_file:
     - users/will/ssh.pub
 
-- name: add dotfiles
-  copy:
-    src: users/will/{{ item.src }}
-    dest: /home/will/{{ item.dest }}
-    owner: will
-    group: will
-    mode: 0600
-  with_items:
-    - { src: 'zshrc', dest: '.zshrc' }
-    - { src: 'gitconfig', dest: '.gitconfig' }
+# Not needed since using backup solution(s) however keeping for future reference
+#- name: add dotfiles
+#  copy:
+#    src: users/will/{{ item.src }}
+#    dest: /home/will/{{ item.dest }}
+#    owner: will
+#    group: will
+#    mode: 0600
+#  with_items:
+#    - { src: 'zshrc', dest: '.zshrc' }
+#    - { src: 'gitconfig', dest: '.gitconfig' }

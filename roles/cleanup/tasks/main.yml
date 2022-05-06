@@ -1,0 +1,16 @@
+- name: Post-install Cleaning (Debian)
+  apt:
+    autoclean: yes
+    autoremove: yes
+    purge: yes
+  when: ansible_distribution == "Debian"
+
+- name: Remove unneeded (Manjaro)
+  command: pacman -Qtdq | pacman -Rns -
+  when: ansible_distribution == "Archlinux"
+
+- name: Clean cache (Manjaro)
+  command: paccache -r
+  when: ansible_distribution == "Archlinux"
+
+#TODO: Implement some sort of reporting
