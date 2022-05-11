@@ -5,9 +5,20 @@
     purge: yes
   when: ansible_distribution == "Debian"
 
-- name: Remove unneeded (Manjaro)
-  shell: pacman -Qtdq | pacman -Rns -
-  when: ansible_distribution == "Archlinux"
+# This doesn't work because -Qtdq will probably respond with code 1
+# due to it not finding any unused dependencies
+# TODO: Run -Qtdq first and if it responds something that isn't 1
+#       then run -Rns -
+#- name: Remove unneeded (Manjaro)
+#  shell: pacman -Qtdq | pacman -Rns -
+#  when: ansible_distribution == "Archlinux"
+
+- name: Remove unneeded reminder (Manjaro)
+  become_user: will
+  lineinfile:
+    path: "/home/will/reminder.txt"
+    line: "Setup deja dup backup"
+    create: yes
 
 - name: Clean cache (Manjaro)
   command: paccache -r
