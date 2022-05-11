@@ -17,7 +17,7 @@
   become_user: will
   lineinfile:
     path: "/home/will/reminder.txt"
-    line: "Setup deja dup backup"
+    line: "to remove unneeded dependencies run pacman -Qtdq | pacman -Rns -"
     create: yes
 
 - name: Clean cache (Manjaro)
