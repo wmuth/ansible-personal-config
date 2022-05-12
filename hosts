@@ -1,5 +1,5 @@
 #File where we can specifiy which hosts should take which roles
-#To run a certain role on your local system simply add 'localhost ansible_connection=local' to one of the role-headers
+#To run a certain role on your local system simply add 'localhost ansible_connection=local' (without the 's) to one of the role-headers
 
 [laptop]
 
@@ -7,3 +7,4 @@
 
 [server]
 
+[basic/cleanup only]
