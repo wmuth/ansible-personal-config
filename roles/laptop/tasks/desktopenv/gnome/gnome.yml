@@ -96,7 +96,8 @@
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled", value: "true" }
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from", value: "21.5" }
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to", value: "6" }
-    - { key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature", value: "2000" }
+    - { key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature", value: "1700" }
+    - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic", value: "false" }
 
 - name: Fix alt-tabbing
   become_user: will
