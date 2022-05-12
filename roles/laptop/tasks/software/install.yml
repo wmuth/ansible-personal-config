@@ -18,11 +18,13 @@
     name: celluloid
     state: latest
 
-#TODO: Install extensions and settings
 - name: Install Code OSS
   package:
     name: code
     state: latest
+
+- name: Install Code OSS Extensions
+  import_tasks: codeExtensions.yml
 
 - name: Install Deja Dup Backups
   package:

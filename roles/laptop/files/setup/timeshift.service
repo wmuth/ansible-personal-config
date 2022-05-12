@@ -1,0 +1,10 @@
+[Unit]
+Description=Checks if timeshift scheduled backups have been run
+Wants=timeshiftBackupCheck.timer
+
+[Service]
+Type=oneshot
+ExecStart=timeshift --check --scripted
+
+[Install]
+WantedBy=multi-user.target

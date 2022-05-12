@@ -1,0 +1,20 @@
+- name: Install Extension Neovim
+  command: code --install-extension asvetliakov.vscode-neovim
+
+- name: Install Extension C++
+  command: code --install-extension ms-vscode.cpptools
+
+- name: Install Extension Java
+  command: code --install-extension redhat.java
+
+- name: Install Extension Icon Theme
+  command: code --install-extension PKief.material-icon-theme
+
+- name: Install Extension Python
+  command: code --install-extension ms-python.python
+
+- name: Install Extension Go
+  command: code --install-extension golang.Go
+
+- name: Install Extension Rust
+  command: code --install-extension matklad.rust-analyzer

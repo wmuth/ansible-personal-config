@@ -22,5 +22,32 @@
     name: bluetooth
     enabled: no
 
-# theme installed programs
-# terminator, gnome terminal, code
+- name: Install printing package
+  package:
+    name: manjaro-printer
+    state: latest
+
+- name: Enable printing services
+  shell:
+    cmd: systemctl enable cups.service; systemctl enable cups.socket; systemctl enable cups.path; systemctl enable avahi-daemon.service
+
+- name: Disable waitonline service
+  service:
+    name: NetworkManager-wait-online
+    enabled: no
+
+- name: Copy custom timeshift systemd timer and service
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: "files/setup/timeshift.timer", dest: "/etc/systemd/system/timeshiftBackupCheck.timer"}
+    - { src: "files/setup/timeshift.service", dest: "/etc/systemd/system/timeshiftBackupCheck.service" }
+
+- name: Enable custom timeshift timer and service
+  service:
+    name: "{{ item.name }}"
+    enabled: yes
+  with_items:
+    - { name: "/etc/systemd/system/timeshiftBackupCheck.timer" }
+    - { name: "/etc/systemd/system/timeshiftBackupCheck.service" }

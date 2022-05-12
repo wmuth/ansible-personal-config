@@ -3,5 +3,7 @@
     name: systemd-timesyncd
     enabled: yes
 
-# Add Swapfile
+- name: Set NTP true
+  command: timedatectl set-ntp true
+
 - import_tasks: swap.yml
