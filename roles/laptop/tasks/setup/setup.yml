@@ -61,3 +61,11 @@
   package:
     name: rust
     state: latest
+
+- name: Install java
+  package:
+    name: "{{ item.name }}"
+    state: latest
+  with_items:
+    - { name: "jre-openjdk-headless" }
+    - { name: "jdk-openjdk" }
