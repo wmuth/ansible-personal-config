@@ -59,8 +59,11 @@
 
 - name: Install rust
   package:
-    name: rust
+    name: "{{ item.name }}"
     state: latest
+  with_items:
+    - { name: "rust }
+    - { name: "rust-analyzer" }  
 
 - name: Install java
   package:
