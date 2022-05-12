@@ -6,7 +6,7 @@
 
 - name: Debug
   debug:
-    var=ansible_date_time.epoch
+    var=(ansible_date_time.epoch - mirrorStats.stat.mtime)
 
 # Compare current time epoch and the last modified time to only run when time difference more than 432000 seconds, 5 days
 - name: List mirrors by speed (Manjaro)
