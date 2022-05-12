@@ -25,3 +25,13 @@
 - name: Install Extension Rust
   become_user: will
   command: code --install-extension matklad.rust-analyzer
+
+- name: Install Extension YAML
+  become_user: will
+  command: code --install-extension redhat.vscode-yaml
+
+- name: Install Extension Ansible
+  become_user: will
+  command: code --install-extension redhat.ansible
+
+
