@@ -8,12 +8,12 @@
   with_items:
     - { dir: '.ssh' }
 
-- name: add ssh key
-  authorized_key:
-    user: will
-    key: "{{ item }}"
-  with_file:
-    - users/will/ssh.pub
+#- name: add ssh key
+#  authorized_key:
+#    user: will
+#    key: "{{ item }}"
+#  with_file:
+#    - users/will/ssh.pub
 
 # Not needed since using backup solution(s) however keeping for future reference
 #- name: add dotfiles
