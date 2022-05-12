@@ -2,7 +2,7 @@
   command: code --install-extension asvetliakov.vscode-neovim
 
 - name: Install Extension C++
-  command: code --install-extension ms-vscode.cpptools
+  command: code --install-extension llvm-vs-code-extensions.vscode-clangd
 
 - name: Install Extension Java
   command: code --install-extension redhat.java
