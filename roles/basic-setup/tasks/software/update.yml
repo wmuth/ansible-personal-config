@@ -4,14 +4,10 @@
   register: mirrorStats
   when: ansible_distribution == "Archlinux"
 
-- name: Debug
-  debug:
-    var="{{ ansible_date_time.epoch|int - mirrorStats.stat.mtime }}"
-
 # Compare current time epoch and the last modified time to only run when time difference more than 432000 seconds, 5 days
 - name: List mirrors by speed (Manjaro)
   command: pacman-mirrors --continent
-  when: (ansible_distribution == "Archlinux") #and (ansible_date_time.epoch - mirrorStats.stat.mtime > 432000)
+  when: (ansible_distribution == "Archlinux") and (ansible_date_time.epoch|int - mirrorStats.stat.mtime > 432000)
 
 - name: Update repos and upgrade system (Manjaro)
   pacman:
