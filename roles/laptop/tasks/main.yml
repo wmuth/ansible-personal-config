@@ -1,10 +1,4 @@
 # Desktop Environments
-
-- name: debug
-  debug:
-    var=gnome
-
-
 - import_tasks: desktopenv/gnome/gnome.yml
   when: gnome is defined and gnome == true
 
