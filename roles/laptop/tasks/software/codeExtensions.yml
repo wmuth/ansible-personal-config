@@ -1,13 +1,13 @@
-- name: Install Extension "{{ item.name }}"
+- name: Install Extensions for Code OSS
   become_user: will
   command: code --install-extension "{{ item.extension }}"
   with_items:
-    - { name: "Neovim", extension: "asvetliakov.vscode-neovim"}
-    - { name: "Clangd", extension: "llvm-vs-code-extensions.vscode-clangd"}
-    - { name: "Java", extension: "redhat.java"}
-    - { name: "Material Icons", extension: "PKief.material-icon-theme"}
-    - { name: "Python", extension: "ms-python.python"}
-    - { name: "Go", extension: "golang.Go"}
-    - { name: "Rust", extension: "matklad.rust-analyzer"}
-    - { name: "YAML", extension: "redhat.vscode-yaml"}
-    - { name: "Neovim", extension: "redhat.ansible"}
+    - { extension: "asvetliakov.vscode-neovim"}
+    - { extension: "llvm-vs-code-extensions.vscode-clangd"}
+    - { extension: "redhat.java"}
+    - { extension: "PKief.material-icon-theme"}
+    - { extension: "ms-python.python"}
+    - { extension: "golang.Go"}
+    - { extension: "matklad.rust-analyzer"}
+    - { extension: "redhat.vscode-yaml"}
+    - { extension: "redhat.ansible"}
