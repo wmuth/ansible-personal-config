@@ -69,14 +69,14 @@
 - name: Maximize hoykey
   become_user: will
   dconf:
-    key: "/org/gnome/desktop.wm/keybindings/maximize"
+    key: "/org/gnome/desktop/wm/keybindings/maximize"
     value: "['<Super>Up']"
 
 - name: Show battery percentage
   become_user: will
   dconf:
     key: "/org/gnome/desktop/interface/show-battery-percentage"
-    value: "'true'"
+    value: "true"
 
 - name: Show week number and week day
   become_user: will
