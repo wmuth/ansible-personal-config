@@ -62,7 +62,7 @@
     name: "{{ item.name }}"
     state: latest
   with_items:
-    - { name: "rust }
+    - { name: "rust" }
     - { name: "rust-analyzer" }  
 
 - name: Install java
