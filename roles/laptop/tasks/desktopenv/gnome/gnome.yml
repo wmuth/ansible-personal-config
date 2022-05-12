@@ -95,7 +95,7 @@
   with_items:
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled", value: "true" }
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from", value: "21.5" }
-    - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to", value: "06" }
+    - { key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to", value: "6" }
     - { key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature", value: "2000" }
 
 - name: Fix alt-tabbing
@@ -105,9 +105,7 @@
     value: "{{ item.value}}"
   with_items:
     - { key: "/org/gnome/desktop/wm/keybindings/switch-windows", value: "'<Alt>Tab'" }
-    - { key: "/org/gnome/desktop/wm/keybindings/switch-applications", value: "'<Super>Tab'" }
     - { key: "/org/gnome/desktop/wm/keybindings/switch-windows-backward", value: "'<Shift><Alt>Tab'" }
-    - { key: "/org/gnome/desktop/wm/keybindings/switch-applications-backward", value: "'<Shift><Super>Tab'" }
     - { key: "/org/gnome/shell/window-switcher/current-workspace-only", value: "false" }
 
 - name: Change favorite apps

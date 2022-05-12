@@ -1,37 +1,13 @@
-- name: Install Extension Neovim
+- name: Install Extension "{{ item.name }}"
   become_user: will
-  command: code --install-extension asvetliakov.vscode-neovim
-
-- name: Install Extension C++
-  become_user: will
-  command: code --install-extension llvm-vs-code-extensions.vscode-clangd
-
-- name: Install Extension Java
-  become_user: will
-  command: code --install-extension redhat.java
-
-- name: Install Extension Icon Theme
-  become_user: will
-  command: code --install-extension PKief.material-icon-theme
-
-- name: Install Extension Python
-  become_user: will
-  command: code --install-extension ms-python.python
-
-- name: Install Extension Go
-  become_user: will
-  command: code --install-extension golang.Go
-
-- name: Install Extension Rust
-  become_user: will
-  command: code --install-extension matklad.rust-analyzer
-
-- name: Install Extension YAML
-  become_user: will
-  command: code --install-extension redhat.vscode-yaml
-
-- name: Install Extension Ansible
-  become_user: will
-  command: code --install-extension redhat.ansible
-
-
+  command: code --install-extension "{{ item.extension }}"
+  with_items:
+    - { name: "Neovim", extension: "asvetliakov.vscode-neovim"}
+    - { name: "Clangd", extension: "llvm-vs-code-extensions.vscode-clangd"}
+    - { name: "Java", extension: "redhat.java"}
+    - { name: "Material Icons", extension: "PKief.material-icon-theme"}
+    - { name: "Python", extension: "ms-python.python"}
+    - { name: "Go", extension: "golang.Go"}
+    - { name: "Rust", extension: "matklad.rust-analyzer"}
+    - { name: "YAML", extension: "redhat.vscode-yaml"}
+    - { name: "Neovim", extension: "redhat.ansible"}

@@ -69,7 +69,7 @@
   become_user: will
   lineinfile:
     path: "/home/will/reminder.txt"
-    line: "fix anki and remember --nosandbox but should be zsh aliased already"
+    line: "fix anki"
     create: yes
 
 - name: Install yt-dlp

@@ -5,8 +5,9 @@
     purge: yes
   when: ansible_distribution == "Debian"
 
-# This doesn't work because -Qtdq will probably respond with code 1
+# This doesn't work because -Qtdq will usually respond with code 1
 # due to it not finding any unused dependencies
+# This causes ansible to stop execution
 # TODO: Run -Qtdq first and if it responds something that isn't 1
 #       then run -Rns -
 #- name: Remove unneeded (Manjaro)
@@ -24,4 +25,4 @@
   command: paccache -r
   when: ansible_distribution == "Archlinux"
 
-#TODO: Implement some sort of reporting
+#TODO-Maybe: Implement some sort of reporting

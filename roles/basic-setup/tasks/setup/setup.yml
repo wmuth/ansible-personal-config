@@ -6,4 +6,5 @@
 - name: Set NTP true
   command: timedatectl set-ntp true
 
+# Swapfile
 - import_tasks: swap.yml
