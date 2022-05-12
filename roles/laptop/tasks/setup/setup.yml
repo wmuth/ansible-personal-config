@@ -58,6 +58,6 @@
     state: latest
 
 - name: Install rust
-  pckage:
+  package:
     name: rust
     state: latest
