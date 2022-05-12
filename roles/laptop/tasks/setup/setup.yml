@@ -51,3 +51,13 @@
   with_items:
     - { name: "/etc/systemd/system/timeshiftBackupCheck.timer" }
     - { name: "/etc/systemd/system/timeshiftBackupCheck.service" }
+
+- name: Install go
+  package:
+    name: go
+    state: latest
+
+- name: Install rust
+  pckage:
+    name: rust
+    state: latest
