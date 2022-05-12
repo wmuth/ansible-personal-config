@@ -45,7 +45,7 @@
     - { src: "files/setup/timeshift.service", dest: "/etc/systemd/system/timeshiftBackupCheck.service" }
 
 - name: Enable custom timeshift timer and service
-  service:
+  systemd:
     name: "{{ item.name }}"
     enabled: yes
   with_items:
