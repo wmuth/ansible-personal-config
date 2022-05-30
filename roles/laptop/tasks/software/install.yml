@@ -8,6 +8,11 @@
     name: chromium
     state: latest
 
+- name: Install Brave
+  package:
+    name: brave-browser
+    state: latest
+
 - name: Install Bitwarden
   package:
     name: bitwarden
@@ -63,6 +68,11 @@
 - name: Install Libre Office
   package:
     name: libreoffice
+    state: latest
+
+- name: Install Obsidian
+  package:
+    name: obsidian
     state: latest
 
 - name: Anki text reminder
