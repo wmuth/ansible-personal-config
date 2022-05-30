@@ -115,7 +115,7 @@
   become_user: will
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "['firefox.desktop', 'chromium.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'code-oss.desktop', 'terminator.desktop', 'org.manjaro.pamac.manager.desktop', 'calamares.desktop', 'manjaro-architect.desktop']"
+    value: "['firefox.desktop', 'chromium.desktop', 'brave-browser.desktop' , 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'code-oss.desktop', 'terminator.desktop', 'org.manjaro.pamac.manager.desktop', 'calamares.desktop', 'manjaro-architect.desktop']"
 
 # Can't find an easy way to do this via terminal
 - name: Reminder for default programs
