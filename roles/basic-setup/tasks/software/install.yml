@@ -5,19 +5,19 @@
       - neofetch
       - neovim
       - tmux
-      - ncdu
-      - trash-cli
       - exa
       - bat
       - ripgrep
-      - dust
-      - duf
-      - broot
-      - fd
-      - bottom
-      - sd
       - tealdeer
-      - gping
-      - procs
-      - mcfly
       - zoxide
+      - bottom
+      - du-dust
+      - mcfly
+
+- name: Install man pages (Arch)
+  pacman:
+    state: latest
+    name:
+      - man-db
+      - man-pages
+  when: ansible_distribution == "Archlinux"

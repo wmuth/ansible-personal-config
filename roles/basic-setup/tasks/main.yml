@@ -1,14 +1,7 @@
-# TODO: Make this not be hardcoded for manjaro laptop, this is supposed to work on e.g. Ubuntu server as well, need var file with package names
-# ansible_distribution should be used and checking for which DE, if any. or could set values in localhost file?
+# Get distro vars
+- include_vars: "{{ ansible_distribution }}.yml"
 
-# Load our vault variables
-# Not needed atm since using certain backups rather than vaults for that kind of data
-#- include_vars: vault.yml
-
-# Configure users
-- import_tasks: users/will.yml
-
-# Sort mirrors, update & upgrade
+# Do updates
 - import_tasks: software/update.yml
 
 # Install software
