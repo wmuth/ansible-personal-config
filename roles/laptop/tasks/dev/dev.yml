@@ -1,0 +1,17 @@
+- name: Install go
+    package:
+      name: go
+      state: latest
+
+- name: Install rust
+    package:
+      name: rust
+      state: latest
+
+- name: Install java
+    package:
+      name: "{{ item.name }}"
+      state: latest
+    with_items:
+      - { name: "{{ jre }}" }
+      - { name: "{{ jdk }}" }
