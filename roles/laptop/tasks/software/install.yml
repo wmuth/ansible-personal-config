@@ -13,6 +13,11 @@
     name: brave-browser
     state: latest
 
+- name: Install Codium
+  package:
+    name: codium
+    stae: latest
+
 - name: Install Bitwarden
   package:
     name: bitwarden
@@ -22,14 +27,6 @@
   package:
     name: celluloid
     state: latest
-
-- name: Install Code OSS
-  package:
-    name: code
-    state: latest
-
-- name: Install Code OSS Extensions
-  import_tasks: codeExtensions.yml
 
 - name: Install Deja Dup Backups
   package:
@@ -41,18 +38,6 @@
   lineinfile:
     path: "/home/will/reminder.txt"
     line: "Setup deja dup backup"
-    create: yes
-
-- name: Install Timeshift
-  package:
-    name: timeshift
-    state: latest
-
-- name: Reminder Timeshift
-  become_user: will
-  lineinfile:
-    path: "/home/will/reminder.txt"
-    line: "setup timeshift"
     create: yes
 
 - name: Install Terminator
@@ -92,12 +77,16 @@
     name: eog
     state: latest
 
-- name: Install Ranger
-  package:
-    name: ranger
-    state: latest
+# Some programs use things like flatpaks on some distros
+# So we need independent install procedures for those distros
+- import_tasks: arch/install.yml
+    when: ansible_distribution == "Archlinux"
 
-- name: Install Make
-  package:
-    name: make
-    state: latest
+- import_tasks: debian/install.yml
+    when: ansible_distribution == "Debian"
+
+- import_tasks: ubuntu/install.yml
+    when: ansible_distribution == "Ubuntu"
+
+- import_tasks: fedora/install.yml
+    when: ansible_distribution == "Fedora"

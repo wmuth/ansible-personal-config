@@ -1,10 +1,14 @@
-- name: Enable systemd-timesyncd
+- name: Install systemd-timesyncd (Ubuntu)
+  package:
+    name: systemd-timesyncd
+    state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: Enable and start systemd-timesyncd
   service:
     name: systemd-timesyncd
     enabled: yes
+    state: started
 
 - name: Set NTP true
   command: timedatectl set-ntp true
-
-# Swapfile
-- import_tasks: swap.yml

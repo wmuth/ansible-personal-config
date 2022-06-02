@@ -1,29 +1,58 @@
-- name: Get pacman mirrors modified time (Manjaro)
+# Arch-------------
+- name: Get pacman mirrors modified time (Arch)
   stat:
     path: /etc/pacman.d/mirrorlist
   register: mirrorStats
   when: ansible_distribution == "Archlinux"
 
+- name: Install reflector for mirror sorting (Arch)
+  pacman:
+    name: reflector
+    state: latest
+  when: ansible_distribution == "Archlinux"
+
 # Compare current time epoch and the last modified time
 # only run when time difference more than 432000 seconds, 5 days
-- name: List mirrors by speed (Manjaro)
-  command: pacman-mirrors --continent
+- name: Run reflector (Arch)
+  command: reflector --country Sweden,Norway,Denmark,Finland --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
   when: (ansible_distribution == "Archlinux") and (ansible_date_time.epoch|int - mirrorStats.stat.mtime > 432000)
 
-- name: Update repos and upgrade system (Manjaro)
+- name: Update repos and upgrade system (Arch)
   pacman:
     update_cache: yes
     upgrade: yes
   when: ansible_distribution == "Archlinux"
 
-#TODO:
-# Not super easy, requires changing of /etc/apt/sources.list file using some regex to grab ubuntu version name
-#- name: List mirrors by speed (Debian)
-#  command: 
-#  when: ansible_distribution == "Debian"
-
+# Debian-----------
 - name: Update repos and upgrade system (Debian)
   apt:
     update_cache: yes
     upgrade: yes
   when: ansible_distribution == "Debian"
+
+# Ubuntu-----------
+- name: Update repos and upgrade system (Ubuntu)
+  apt:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_distribution == "Ubuntu"
+
+# Fedora-----------
+- name: Enable flathub
+  command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  when: ansible_distribution == "Fedora"
+
+- name: flatpak update
+  command: flatpak update
+  when: ansible_distribution == "Fedora"
+
+- name: dnf update
+  dnf:
+    update_cache: yes
+  when: ansible_distribution == "Fedora"
+
+- name: dnf upgrade
+  dnf:
+    name: "*"
+    state: latest
+  when: ansible_distribution == "Fedora"

@@ -22,53 +22,10 @@
     name: bluetooth
     enabled: no
 
-- name: Install printing package
-  package:
-    name: manjaro-printer
-    state: latest
-
-- name: Enable printing services
-  shell:
-    cmd: systemctl enable cups.service; systemctl enable cups.socket; systemctl enable cups.path; systemctl enable avahi-daemon.service
-
 - name: Disable waitonline service
   service:
     name: NetworkManager-wait-online
     enabled: no
 
-- name: Copy custom timeshift systemd timer and service
-  copy:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-  with_items:
-    - { src: "files/setup/timeshift.timer", dest: "/etc/systemd/system/timeshiftBackupCheck.timer"}
-    - { src: "files/setup/timeshift.service", dest: "/etc/systemd/system/timeshiftBackupCheck.service" }
-
-- name: Enable custom timeshift timer and service
-  systemd:
-    name: "{{ item.name }}"
-    enabled: yes
-  with_items:
-    - { name: "/etc/systemd/system/timeshiftBackupCheck.timer" }
-    - { name: "/etc/systemd/system/timeshiftBackupCheck.service" }
-
-- name: Install go
-  package:
-    name: go
-    state: latest
-
-- name: Install rust
-  package:
-    name: "{{ item.name }}"
-    state: latest
-  with_items:
-    - { name: "rust" }
-    - { name: "rust-analyzer" }  
-
-- name: Install java
-  package:
-    name: "{{ item.name }}"
-    state: latest
-  with_items:
-    - { name: "jre-openjdk-headless" }
-    - { name: "jdk-openjdk" }
+- import_tasks: shellConfig.yml
+- import_tasks: swap.yml

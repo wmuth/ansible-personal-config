@@ -1,3 +1,5 @@
+# This doesn't need to be dependent on distro
+# I don't need these no matter which distro
 - name: Remove Htop
   package:
     name: htop
@@ -16,4 +18,44 @@
 - name: Remove Gthumb
   package:
     name: gthumb
+    state: absent
+
+- name: Remove gnome-maps
+  package:
+    name: gnome-maps
+    state: absent
+
+- name: Remove gnome-photos
+  package:
+    name: gnome-photos
+    state: absent
+
+- name: Remove fedora media writer
+  package:
+    name: mediawriter
+    state: absent
+
+- name: Remove gnome-boxes
+  package:
+    name: gnome-boxes
+    state: absent
+
+- name: Remove cheese
+  package:
+    name: cheese
+    state: absent
+
+- name: Remove gnome-connections
+  package:
+    name: gnome-connections
+    state: absent
+
+- name: Remove rhythmbox
+  package:
+    name: rhythmbox
+    state: absent
+
+- name: Remove gnome-tour
+  package:
+    name: gnome-tour
     state: absent

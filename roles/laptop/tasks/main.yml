@@ -1,5 +1,8 @@
+# Get distro vars
+- include_vars: "{{ ansible_distribution }}.yml"
+
 # Desktop Environments
-- import_tasks: desktopenv/gnome/gnome.yml
+- import_tasks: desktopenv/gnome.yml
   when: gnome is defined and gnome == true
 
 # Install software
@@ -7,6 +10,9 @@
 
 # Remove software
 - import_tasks: software/remove.yml
+
+# Development sdk, languages
+- import_tasks: dev/dev.yml
 
 # Perform rest of system setup
 - import_tasks: setup/setup.yml
