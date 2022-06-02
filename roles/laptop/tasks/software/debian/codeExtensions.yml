@@ -1,0 +1,13 @@
+- name: Install Extensions for Code OSS
+  become_user: will
+  command: codium --install-extension "{{ item.extension }}"
+  with_items:
+    - { extension: "asvetliakov.vscode-neovim"}
+    - { extension: "llvm-vs-code-extensions.vscode-clangd"}
+    - { extension: "redhat.java"}
+    - { extension: "PKief.material-icon-theme"}
+    - { extension: "ms-python.python"}
+    - { extension: "golang.Go"}
+    - { extension: "matklad.rust-analyzer"}
+    - { extension: "redhat.vscode-yaml"}
+    - { extension: "redhat.ansible"}
