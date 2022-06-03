@@ -82,11 +82,14 @@
 - import_tasks: arch/install.yml
     when: ansible_distribution == "Archlinux"
 
-- import_tasks: debian/install.yml
-    when: ansible_distribution == "Debian"
+- import_tasks: suse/install.yml
+    when: ansible_distribution == "SUSE"
 
 - import_tasks: ubuntu/install.yml
     when: ansible_distribution == "Ubuntu"
 
 - import_tasks: fedora/install.yml
     when: ansible_distribution == "Fedora"
+
+# Install Codium extensions
+- import_tasks: codeExtensions.yml

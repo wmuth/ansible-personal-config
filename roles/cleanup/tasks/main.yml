@@ -3,12 +3,10 @@
   command: paccache -r
   when: ansible_distribution == "Archlinux"
 
-# Debian----
-- name: Post-install Cleaning (Debian)
-  apt:
-    autoclean: yes
-    autoremove: yes
-  when: ansible_distribution == "Debian"
+# SUSE------
+- name: Post-install Cleaning (SUSE)
+  command: zypper clean
+  when: ansible_distribution == "SUSE"
 
 # Ubuntu----
 - name: Post-install Cleaning (Ubuntu)
