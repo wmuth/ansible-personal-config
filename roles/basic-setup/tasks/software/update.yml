@@ -23,12 +23,13 @@
     upgrade: yes
   when: ansible_distribution == "Archlinux"
 
-# Debian-----------
-- name: Update repos and upgrade system (Debian)
-  apt:
+# SUSE-------------
+- name: Update repos and upgrade system (SUSE)
+  zypper:
     update_cache: yes
-    upgrade: yes
-  when: ansible_distribution == "Debian"
+    name: '*'
+    state: latest
+  when: ansible_distribution == "SUSE"
 
 # Ubuntu-----------
 - name: Update repos and upgrade system (Ubuntu)
@@ -46,13 +47,9 @@
   command: flatpak update
   when: ansible_distribution == "Fedora"
 
-- name: dnf update
+- name: dnf update & upgrade
   dnf:
     update_cache: yes
-  when: ansible_distribution == "Fedora"
-
-- name: dnf upgrade
-  dnf:
     name: "*"
     state: latest
   when: ansible_distribution == "Fedora"

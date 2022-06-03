@@ -126,13 +126,13 @@
   become_user: will
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "{{ fav-apps }}"
+    value: "{{ fav_apps }}"
 
 - name: Correct app picker layout
   become_user: will
-  dconf: 
+  dconf:
     key: "/org/gnome/shell/app-picker-layout"
-    value: "{{ app-picker }}"
+    value: "{{ app_picker }}"
 
 - name: Correct app picker folders
   become_user: will
