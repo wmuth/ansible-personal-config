@@ -1,6 +1,6 @@
 - name: Install Extensions for Code OSS
   become_user: will
-  command: codium --install-extension "{{ item.extension }}"
+  command: "{{ codium }}" --install-extension "{{ item.extension }}"
   with_items:
     - { extension: "asvetliakov.vscode-neovim"}
     - { extension: "llvm-vs-code-extensions.vscode-clangd"}
