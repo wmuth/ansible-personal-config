@@ -1,2 +1,6 @@
 fav-apps: "['firefox.desktop', 'chromium-browser.d    esktop', 'com.brave.Browser.desktop', 'org.gnome.N    autilus.desktop', 'nvim.desktop', 'terminator.desk    top', 'com.vscodium.codium.desktop']"
 app-picker: "[{'80fa1485-f793-46fc-92d2-ac1c5b50d1    54': <{'position': <0>}>, '88e38cfa-f6bb-44af-b0f6    -16e217e3a840': <{'position': <1>}>, 'Utilities':     <{'position': <2>}>, 'org.gnome.TextEditor.desktop    ': <{'position': <3>}>, 'com.bitwarden.desktop.des    ktop': <{'position': <4>}>, 'io.github.celluloid_p    layer.Celluloid.desktop': <{'position': <5>}>, 'md    .obsidian.Obsidian.desktop': <{'position': <6>}>,     'texmaker.desktop': <{'position': <7>}>]"
+fira_font_package: fonts-firacode
+jre: "default-jre"
+jdk: "default-jdk"
+codium: "codium"

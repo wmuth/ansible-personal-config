@@ -1,2 +1,6 @@
-fav-apps: "['firefox.desktop', 'chromium-browser.desktop', 'com.brave.Browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'terminator.desktop', 'com.vscodium.codium.desktop']"
-app-picker: "[{'80fa1485-f793-46fc-92d2-ac1c5b50d154': <{'position': <0>}>, '88e38cfa-f6bb-44af-b0f6-16e217e3a840': <{'position': <1>}>, 'Utilities': <{'position': <2>}>, 'org.gnome.TextEditor.desktop': <{'position': <3>}>, 'com.bitwarden.desktop.desktop': <{'position': <4>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <5>}>, 'md.obsidian.Obsidian.desktop': <{'position': <6>}>, 'texmaker.desktop': <{'position': <7>}>]"
+fav_apps: "['firefox.desktop', 'chromium-browser.desktop', 'com.brave.Browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'terminator.desktop', 'com.vscodium.codium.desktop']"
+app_picker: "[{'80fa1485-f793-46fc-92d2-ac1c5b50d154': <{'position': <0>}>, '88e38cfa-f6bb-44af-b0f6-16e217e3a840': <{'position': <1>}>, 'Utilities': <{'position': <2>}>, 'org.gnome.TextEditor.desktop': <{'position': <3>}>, 'com.bitwarden.desktop.desktop': <{'position': <4>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <5>}>, 'md.obsidian.Obsidian.desktop': <{'position': <6>}>, 'texmaker.desktop': <{'position': <7>}>]"
+fira_font_package: "fira-code-fonts"
+jre: "java-latest-openjdk"
+jdk: "java-latest-openjdk-devel"
+codium: "flatpak run com.vscodium.codium --no-sandbox"
