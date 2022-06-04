@@ -1,11 +1,11 @@
 # Set quick access app icons
-fav_apps: "['firefox_firefox.desktop', 'chromium_chromium.desktop', 'brave_brave.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'codium_codium.desktop', 'terminator.desktop', 'bitwarden_bitwarden.desktop']"
+fav_apps: "['firefox.desktop', 'chromium.desktop', 'brave-browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'codium.desktop', 'terminator.desktop', 'bitwarden.desktop']"
 # Correct app picker
-app_picker: "[{'Utilities': <{'position': <0>}>, '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea': <{'position': <1>}>, '99710790-0ee6-4fc4-88d6-4ef6ac9a1436': <{'position': <2>}>, 'vim.desktop': <{'position': <3>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <4>}>, 'libreoffice-startcenter.desktop': <{'position': <5>}>}]"
+app_picker: "[{'Utilities': <{'position': <0>}>, '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea': <{'position': <1>}>, '940c0552-08aa-4c35-ac64-6dd164280fae': <{'position': <2>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <3>}>, 'libreoffice-startcenter.desktop': <{'position': <4>}>, 'org.gnome.Weather.desktop': <{'position': <5>}>}]"
 folder_children: "['Utilities', 'YaST', '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea', '99710790-0ee6-4fc4-88d6-4ef6ac9a1436']"
 # Folder 1
 folder1: "/org/gnome/desktop/app-folders/folders/6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea"
-folder1_apps: "['libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-writer.desktop', 'org.gnome.gedit.desktop', 'texmaker.desktop', 'org.gnome.Calculator.desktop']"
+folder1_apps: "['libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-writer.desktop', 'org.gnome.gedit.desktop', 'texmaker.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop']"
 folder1_name: "'Office'"
 # Folder 2
 folder2: "/org/gnome/desktop/app-folders/folders/99710790-0ee6-4fc4-88d6-4ef6ac9a1436"
@@ -13,7 +13,7 @@ folder2_apps: "['software-properties-gtk.desktop', 'update-manager.desktop', 'gn
 folder2_name: "'Preferences'"
 # Folder 3
 folder3: "/org/gnome/desktop/app-folders/folders/Utilities"
-folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.DejaDup.desktop', 'software-properties-drivers.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.PowerStats.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'mpv.desktop']"
+folder3_apps: "apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.DejaDup.desktop', 'software-properties-drivers.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.PowerStats.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'mpv.desktop', 'bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'gparted.desktop', 'lstopo.desktop', 'gnome-layouts.desktop', 'org.gnome.Logs.desktop', 'manjaro-hello.desktop', 'msm_notifier_settings.desktop', 'manjaro-settings-manager.desktop', 'jconsole-java-openjdk.desktop', 'com.github.maoschanz.DynamicWallpaperEditor.desktop', 'electron16.desktop', 'jshell-java-openjdk.desktop', 'gnome-printers-panel.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'org.gnome.Screenshot.desktop', 'xdvi.desktop']"
 # Package names
 fira_font_package: ttf-fira-code
 jre: jre-openjdk
