@@ -8,11 +8,11 @@
       - exa
       - bat
       - ripgrep
-      - tealdeer
+      - "{{ tealdeer }}"
       - zoxide
-      - bottom
-      - du-dust
-      - mcfly
+      - "{{ bottom }}"
+      - "{{ du_dust }}"
+      - "{{ mcfly }}"
 
 - name: Install man pages (Arch)
   pacman:
