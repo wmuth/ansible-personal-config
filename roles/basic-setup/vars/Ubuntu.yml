@@ -2,3 +2,4 @@ tealdeer: tldr
 bottom: htop
 du_dust: ncdu
 mcfly: fzf
+psutil: python3-psutil

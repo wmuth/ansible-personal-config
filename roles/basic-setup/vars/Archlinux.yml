@@ -1,4 +1,5 @@
 tealdeer: tealdeer
 bottom: bottom
-du_dust: du-dust
+du_dust: dust
 mcfly: mcfly
+psutil: python-psutil

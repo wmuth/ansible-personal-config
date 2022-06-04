@@ -1,20 +1,22 @@
 - name: Install chromium
   package:
     name: chromium
-    state: present
+    state: latest
+
+- name: Install yay
+  package:
+    name: yay
+    state: latest
 
 - name: Install brave
-  package:
-    name: brave
-    state: present
+  become_user: will
+  command: yay -S brave-bin --answerdiff N --answerclean A
 
 - name: Install codium
-  package:
-    name: codium
-    state: present
-    classic: yes
+  become_user: will
+  command: yay -S vscodium-bin --answerdiff N --answerclean A
 
 - name: Install bitwarden
   package:
     name: bitwarden
-    state: present
+    state: latest

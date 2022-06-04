@@ -2,3 +2,4 @@ tealdeer: tealdeer
 bottom: bottom
 du_dust: du-dust
 mcfly: mcfly
+psutil: python-psutil
