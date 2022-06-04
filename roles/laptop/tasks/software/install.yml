@@ -3,26 +3,6 @@
     name: firefox
     state: latest
 
-- name: Install Chromium
-  package:
-    name: chromium
-    state: latest
-
-- name: Install Brave
-  package:
-    name: brave-browser
-    state: latest
-
-- name: Install Codium
-  package:
-    name: codium
-    stae: latest
-
-- name: Install Bitwarden
-  package:
-    name: bitwarden
-    state: latest
-
 - name: Install Celluloid
   package:
     name: celluloid
@@ -53,11 +33,6 @@
 - name: Install Libre Office
   package:
     name: libreoffice
-    state: latest
-
-- name: Install Obsidian
-  package:
-    name: obsidian
     state: latest
 
 - name: Anki text reminder

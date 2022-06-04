@@ -1,0 +1,20 @@
+- name: Install chromium
+  snap:
+    name: chromium
+    state: present
+
+- name: Install brave
+  snap:
+    name: brave
+    state: present
+
+- name: Install codium
+  snap:
+    name: codium
+    state: present
+    classic: yes
+
+- name: Install bitwarden
+  snap:
+    name: bitwarden
+    state: present

@@ -1,10 +1,5 @@
 # This doesn't need to be dependent on distro
 # I don't need these no matter which distro
-- name: Remove Htop
-  package:
-    name: htop
-    state: absent
-
 - name: Remove Lollypop
   package:
     name: lollypop
@@ -58,4 +53,9 @@
 - name: Remove gnome-tour
   package:
     name: gnome-tour
+    state: absent
+
+- name: Remove vim
+  package:
+    name: vim
     state: absent
