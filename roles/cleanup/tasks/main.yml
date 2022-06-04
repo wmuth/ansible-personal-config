@@ -19,5 +19,5 @@
 - name: Clean dnf (Fedora)
   dnf:
     autoremove: yes
-  when: ansible_distriubtion == "Fedora"
+  when: ansible_distribution == "Fedora"
 #TODO-Maybe: Implement some sort of reporting
