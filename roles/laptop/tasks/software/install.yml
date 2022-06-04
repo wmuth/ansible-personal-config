@@ -80,16 +80,16 @@
 # Some programs use things like flatpaks on some distros
 # So we need independent install procedures for those distros
 - import_tasks: arch/install.yml
-    when: ansible_distribution == "Archlinux"
+  when: ansible_distribution == "Archlinux"
 
 - import_tasks: suse/install.yml
-    when: ansible_distribution == "SUSE"
+  when: ansible_distribution == "SUSE"
 
 - import_tasks: ubuntu/install.yml
-    when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu"
 
 - import_tasks: fedora/install.yml
-    when: ansible_distribution == "Fedora"
+  when: ansible_distribution == "Fedora"
 
 # Install Codium extensions
 - import_tasks: codeExtensions.yml
