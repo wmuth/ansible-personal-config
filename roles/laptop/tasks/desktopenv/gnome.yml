@@ -125,8 +125,8 @@
 - name: Change favorite apps
   become_user: will
   dconf:
-    key: "/org/gnome/shell/favorite-apps"
-    value: "{{ fav_apps }}"
+   key: "/org/gnome/shell/favorite-apps"
+   value: "{{ fav_apps }}"
 
 - name: Correct app picker layout
   become_user: will
@@ -140,19 +140,15 @@
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - { key: "/org/gnome/desktop/app-folders/folder-children", value: "['Utilities', 'YaST', '88e38cfa-f6bb-44af-b0f6-16e217e3a840', '80fa1485-f793-46fc-92d2-ac1c5b50d154']" }
-    - { key: "/org/gnome/desktop/app-folders/folders/80fa1485-f793-46fc-92d2-ac1c5b50d154/apps", value: "['org.gnome.Calendar.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Weather.desktop']" }
-    - { key: "/org/gnome/desktop/app-folders/folders/80fa1485-f793-46fc-92d2-ac1c5b50d154/name", value: "'System-Office'" }
-    - { key: "/org/gnome/desktop/app-folders/folders/88e38cfa-f6bb-44af-b0f6-16e217e3a840/apps", value: "['libreoffice-calc.desktop', 'libreoffice-impress.desktop', 'libreoffice-writer.desktop', 'libreoffice-math.desktop', 'libreoffice-base.desktop', 'libreoffice-draw.desktop']" }
-    - { key: "/org/gnome/desktop/app-folders/folders/88e38cfa-f6bb-44af-b0f6-16e217e3a840/name", value: "'Office'" }
-    - { key: "/org/gnome/desktop/app-folders/folders/Utilities/apps", value: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'simple-scan.desktop', 'org.gnome.Settings.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'org.gnome.Software.desktop', 'ranger.desktop']" }
-    - { key: "/org/gnome/desktop/app-folders/folders/Utilities/name", value: "'X-GNOME-Utilities.directory'" }
-    - { key: "/org/gnome/desktop/app-folders/folders/Utilities/categories", value: "['X-GNOME-Utilities']" }
-    - { key: "/org/gnome/desktop/app-folders/folders/Utilities/translate", value: "true" }
-    - { key: "/org/gnome/desktop/app-folders/folders/YaST/categories", value: "['X-SuSE-YaST']" }
-# End User Interface
+    - { key: "/org/gnome/desktop/app-folders/folder-children", value: "{{ folder_children }}" }
+    - { key: "{{ folder1 }}/apps", value: "{{ folder1_apps }}" }
+    - { key: "{{ folder1 }}/name", value: "{{ folder1_name }}" }
+    - { key: "{{ folder2 }}/apps", value: "{{ folder2_apps }}" }
+    - { key: "{{ folder2 }}/name", value: "{{ folder2_name }}" }
+    - { key: "{{ folder3 }}/apps", value: "{{ folder3_apps }}" }
+#End User Interface
 
-# Can't find an easy way to do this via terminal
+#Can't find an easy way to do this via terminal
 - name: Reminder for default programs
   become_user: will
   lineinfile:

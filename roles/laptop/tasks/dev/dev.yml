@@ -1,11 +1,11 @@
 - name: Install go
   package:
-    name: go
+    name: "{{ go }}"
     state: latest
 
 - name: Install rust
   package:
-    name: rust
+    name: "{{ rust }}"
     state: latest
 
 - name: Install java
