@@ -1,6 +1,6 @@
 tealdeer: tealdeer
 bottom: bottom
-du_dust: dutree
+du_dust: ncdu
 mcfly: fzf
 psutil: python3-psutil
 # no zoxide reuse package will return already installed
