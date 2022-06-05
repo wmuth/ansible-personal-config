@@ -1,19 +1,19 @@
 # Set quick access app icons
 fav_apps: "['firefox_firefox.desktop', 'chromium_chromium.desktop', 'brave_brave.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'codium_codium.desktop', 'terminator.desktop', 'bitwarden_bitwarden.desktop']"
 # Correct app picker
-app_picker: "[{'Utilities': <{'position': <0>}>, '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea': <{'position': <1>}>, '99710790-0ee6-4fc4-88d6-4ef6ac9a1436': <{'position': <2>}>, 'vim.desktop': <{'position': <3>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <4>}>, 'libreoffice-startcenter.desktop': <{'position': <5>}>}]"
-folder_children: "['Utilities', 'YaST', '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea', '99710790-0ee6-4fc4-88d6-4ef6ac9a1436']"
+app_picker: "[{'Utilities': <{'position': <0>}>, '460bcd49-30df-4e20-9941-da94cd35ccac': <{'position': <1>}>, '20e05a70-a26c-4de6-bcc5-2e03c0406313': <{'position': <2>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <3>}>}]"
+folder_children: "['Utilities', 'YaST', '460bcd49-30df-4e20-9941-da94cd35ccac', '20e05a70-a26c-4de6-bcc5-2e03c0406313']"
 # Folder 1
-folder1: "/org/gnome/desktop/app-folders/folders/6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea"
-folder1_apps: "['libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-writer.desktop', 'org.gnome.gedit.desktop', 'texmaker.desktop', 'org.gnome.Calculator.desktop']"
-folder1_name: "'Office'"
+folder1: "/org/gnome/desktop/app-folders/folders/20e05a70-a26c-4de6-bcc5-2e03c0406313"
+folder1_apps: "['gnome-control-center.desktop', 'software-properties-gtk.desktop', 'update-manager.desktop', 'snap-store_ubuntu-software.desktop', 'gnome-session-properties.desktop']"
+folder1_name: "'Settings'"
 # Folder 2
-folder2: "/org/gnome/desktop/app-folders/folders/99710790-0ee6-4fc4-88d6-4ef6ac9a1436"
-folder2_apps: "['software-properties-gtk.desktop', 'update-manager.desktop', 'gnome-control-center.desktop', 'gnome-session-properties.desktop', 'snap-store_ubuntu-software.desktop']"
-folder2_name: "'Preferences'"
+folder2: "/org/gnome/desktop/app-folders/folders/460bcd49-30df-4e20-9941-da94cd35ccac"
+folder2_apps: "['libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-base.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.gedit.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'texmaker.desktop']"
+folder2_name: "'Office'"
 # Folder 3
 folder3: "/org/gnome/desktop/app-folders/folders/Utilities"
-folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.DejaDup.desktop', 'software-properties-drivers.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.PowerStats.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'mpv.desktop']"
+folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'org.gnome.PowerStats.desktop', 'mpv.desktop', 'vim.desktop', 'software-properties-drivers.desktop', 'htop.desktop', 'gnome-system-monitor.desktop']"
 # Package names
 fira_font_package: fonts-firacode
 jre: default-jre
