@@ -1,19 +1,19 @@
 # Set quick access app icons
-fav_apps: "['firefox_firefox.desktop', 'chromium_chromium.desktop', 'brave_brave.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'codium_codium.desktop', 'terminator.desktop', 'bitwarden_bitwarden.desktop']"
+fav_apps: "['firefox.desktop', 'chromium-browser.desktop', 'com.brave.Browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'com.vscodium.codium.desktop', 'terminator.desktop', 'com.bitwarden.desktop.desktop']"
 # Correct app picker
-app_picker: "[{'Utilities': <{'position': <0>}>, '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea': <{'position': <1>}>, '99710790-0ee6-4fc4-88d6-4ef6ac9a1436': <{'position': <2>}>, 'vim.desktop': <{'position': <3>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <4>}>, 'libreoffice-startcenter.desktop': <{'position': <5>}>}]"
-folder_children: "['Utilities', 'YaST', '6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea', '99710790-0ee6-4fc4-88d6-4ef6ac9a1436']"
+app_picker: "[{'Utilities': <{'position': <0>}>, 'c806baa6-99f0-48f1-8be4-375838deaec9': <{'position': <1>}>, '1d6e09fa-211d-4df2-9e7f-e4df95391865': <{'position': <2>}>, 'YaST': <{'position': <3>}>, 'org.gnome.Weather.desktop': <{'position': <4>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <5>}>, 'pidgin.desktop': <{'position': <6>}>, 'org.gnome.SwellFoop.desktop': <{'position': <7>}>, 'org.gnome.Sudoku.desktop': <{'position': <8>}>, 'org.gnome.Reversi.desktop': <{'position': <9>}>, 'org.gnome.Quadrapassel.desktop': <{'position': <10>}>, 'org.gnome.Polari.desktop': <{'position': <11>}>, 'transmission-gtk.desktop': <{'position': <12>}>, 'org.gnome.Evolution.desktop': <{'position': <13>}>, 'org.gnome.Music.desktop': <{'position': <14>}>}]"
+folder_children: "['Utilities', 'YaST', 'c806baa6-99f0-48f1-8be4-375838deaec9', '1d6e09fa-211d-4df2-9e7f-e4df95391865']"
 # Folder 1
-folder1: "/org/gnome/desktop/app-folders/folders/6eab8a6d-8bbb-4e3e-99a4-72d3b6a37bea"
-folder1_apps: "['libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-writer.desktop', 'org.gnome.gedit.desktop', 'texmaker.desktop', 'org.gnome.Calculator.desktop']"
-folder1_name: "'Office'"
+folder1: "/org/gnome/desktop/app-folders/folders/1d6e09fa-211d-4df2-9e7f-e4df95391865"
+folder1_apps: "['org.gnome.Settings.desktop', 'org.gnome.Extensions.desktop', 'org.gnome.PackageUpdater.desktop', 'gpk-prefs.desktop', 'org.gnome.Software.desktop', 'org.opensuse.YaST.desktop', 'org.opensuse.opensuse_welcome.desktop']"
+folder1_name: "'Settings'"
 # Folder 2
-folder2: "/org/gnome/desktop/app-folders/folders/99710790-0ee6-4fc4-88d6-4ef6ac9a1436"
-folder2_apps: "['software-properties-gtk.desktop', 'update-manager.desktop', 'gnome-control-center.desktop', 'gnome-session-properties.desktop', 'snap-store_ubuntu-software.desktop']"
-folder2_name: "'Preferences'"
+folder2: "/org/gnome/desktop/app-folders/folders/c806baa6-99f0-48f1-8be4-375838deaec9"
+folder2_apps: "['libreoffice-startcenter.desktop', 'libreoffice-base.desktop', 'libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'simple-scan.desktop', 'org.gnome.gedit.desktop', 'org.gnome.Calculator.desktop', 'texmaker.desktop', 'libreoffice-writer.desktop']"
+folder2_name: "'Office'"
 # Folder 3
 folder3: "/org/gnome/desktop/app-folders/folders/Utilities"
-folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.DejaDup.desktop', 'software-properties-drivers.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.PowerStats.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'mpv.desktop']"
+folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Terminal.desktop', 'ca.desrt.dconf-editor.desktop', 'yelp.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Logs.desktop', 'system-config-printer.desktop', 'git-gui.desktop', 'vncviewer.desktop']"
 # Package names
 fira_font_package: fira-code-fonts
 jre: java-18-openjdk-headless
