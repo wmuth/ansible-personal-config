@@ -3,3 +3,4 @@ bottom: bottom
 du_dust: dust
 mcfly: mcfly
 psutil: python-psutil
+zoxide: zoxide

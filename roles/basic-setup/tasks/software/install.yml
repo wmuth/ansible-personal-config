@@ -14,7 +14,7 @@
       - bat
       - ripgrep
       - "{{ tealdeer }}"
-      - zoxide
+      - "{{ zoxide }}"
       - "{{ bottom }}"
       - "{{ du_dust }}"
       - "{{ mcfly }}"
@@ -27,3 +27,7 @@
       - man-db
       - man-pages
   when: ansible_distribution == "Archlinux"
+
+- name: Symlink python to python3 (SUSE)
+  command: ln -fs /usr/bin/python3 /usr/bin/python
+  when: ansible_distribution == "openSUSE Tumbleweed"

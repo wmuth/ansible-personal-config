@@ -1,20 +1,27 @@
 - name: Install chromium
   package:
     name: chromium
-    state: present
+    state: latest
+
+- name: Install flatpak
+  package:
+    name: flatpak
+    state: latest
+
+- name: Enable flathub
+  command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 - name: Install brave
-  package:
-    name: brave
+  flatpak:
+    name: com.brave.Browser
     state: present
 
 - name: Install codium
-  package:
-    name: codium
+  flatpak:
+    name: com.vscodium.codium
     state: present
-    classic: yes
 
 - name: Install bitwarden
-  package:
-    name: bitwarden
+  flatpak:
+    name: com.bitwarden.desktop
     state: present

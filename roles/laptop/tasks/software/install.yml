@@ -7,6 +7,7 @@
   package:
     name: celluloid
     state: latest
+  when: ansible_distribution not in ["Fedora"]
 
 - name: Install Deja Dup Backups
   package:
@@ -58,7 +59,7 @@
   when: ansible_distribution == "Archlinux"
 
 - import_tasks: suse/install.yml
-  when: ansible_distribution == "SUSE"
+  when: ansible_distribution == "openSUSE Tumbleweed"
 
 - import_tasks: ubuntu/install.yml
   when: ansible_distribution == "Ubuntu"

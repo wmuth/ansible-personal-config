@@ -1,5 +1,6 @@
 tealdeer: tealdeer
-bottom: bottom
-du_dust: du-dust
-mcfly: mcfly
+bottom: htop
+du_dust: dutree
+mcfly: fzf
 psutil: python-psutil
+zoxide: zoxide

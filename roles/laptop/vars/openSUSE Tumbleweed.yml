@@ -16,8 +16,8 @@ folder3: "/org/gnome/desktop/app-folders/folders/Utilities"
 folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.DejaDup.desktop', 'software-properties-drivers.desktop', 'display-im6.q16.desktop', 'gnome-language-selector.desktop', 'org.gnome.PowerStats.desktop', 'gnome-system-monitor.desktop', 'htop.desktop', 'org.gnome.Terminal.desktop', 'yelp.desktop', 'mpv.desktop']"
 # Package names
 fira_font_package: fira-code-fonts
-jre: java-latest-openjdk
-jdk: java-latest-openjdk-devel
-codium: codium
+jre: java-18-openjdk-headless
+jdk: java-18-openjdk
+codium: "flatpak run com.vscodium.codium --no-sandbox"
 go: go
 rust: rust

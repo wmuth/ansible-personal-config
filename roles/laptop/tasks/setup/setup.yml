@@ -28,4 +28,6 @@
     enabled: no
 
 - import_tasks: shellConfig.yml
+
 - import_tasks: swap.yml
+  when: ansible_distribution not in ["openSUSE Tumbleweed"]
