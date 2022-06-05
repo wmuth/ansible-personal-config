@@ -122,33 +122,32 @@
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Adwaita-dark'"
 
-# Comment out to make better vars for each distro
-#- name: Change favorite apps
-#  become_user: will
-#  dconf:
-#   key: "/org/gnome/shell/favorite-apps"
-#   value: "{{ fav_apps }}"
-#
-#- name: Correct app picker layout
-#  become_user: will
-# dconf:
-#    key: "/org/gnome/shell/app-picker-layout"
-#    value: "{{ app_picker }}"
-#
-#- name: Correct app picker folders
-#  become_user: will
-#  dconf:
-#    key: "{{ item.key }}"
-#    value: "{{ item.value }}"
-#  with_items:
-#    - { key: "/org/gnome/desktop/app-folders/folder-children", value: "{{ folder_children }}" }
-#    - { key: "{{ folder1 }}/apps", value: "{{ folder1_apps }}" }
-#    - { key: "{{ folder1 }}/name", value: "{{ folder1_name }}" }
-#    - { key: "{{ folder2 }}/apps", value: "{{ folder2_apps }}" }
-#    - { key: "{{ folder2 }}/name", value: "{{ folder2_name }}" }
-#    - { key: "{{ folder3 }}/apps", value: "{{ folder3_apps }}" }
+- name: Change favorite apps
+  become_user: will
+  dconf:
+   key: "/org/gnome/shell/favorite-apps"
+   value: "{{ fav_apps }}"
+
+- name: Correct app picker layout
+  become_user: will
+ dconf:
+    key: "/org/gnome/shell/app-picker-layout"
+    value: "{{ app_picker }}"
+
+- name: Correct app picker folders
+  become_user: will
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - { key: "/org/gnome/desktop/app-folders/folder-children", value: "{{ folder_children }}" }
+    - { key: "{{ folder1 }}/apps", value: "{{ folder1_apps }}" }
+    - { key: "{{ folder1 }}/name", value: "{{ folder1_name }}" }
+    - { key: "{{ folder2 }}/apps", value: "{{ folder2_apps }}" }
+    - { key: "{{ folder2 }}/name", value: "{{ folder2_name }}" }
+    - { key: "{{ folder3 }}/apps", value: "{{ folder3_apps }}" }
 #End User Interface
-#
+
 #Can't find an easy way to do this via terminal
 - name: Reminder for default programs
   become_user: will
