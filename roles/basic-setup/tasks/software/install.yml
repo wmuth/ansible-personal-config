@@ -2,7 +2,6 @@
   package:
     name: tldr
     state: absent
-  when: ansible_distribution == "Archlinux"
 
 - name: Install my utilities
   package:
