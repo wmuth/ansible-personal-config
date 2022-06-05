@@ -130,7 +130,7 @@
 
 - name: Correct app picker layout
   become_user: will
- dconf:
+  dconf:
     key: "/org/gnome/shell/app-picker-layout"
     value: "{{ app_picker }}"
 
