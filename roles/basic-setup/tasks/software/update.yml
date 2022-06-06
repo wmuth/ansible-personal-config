@@ -44,7 +44,7 @@
   when: ansible_distribution == "Fedora"
 
 - name: flatpak update
-  command: flatpak update
+  command: flatpak update -y
   when: ansible_distribution == "Fedora"
 
 - name: dnf update & upgrade
