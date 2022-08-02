@@ -8,10 +8,20 @@
     name: com.brave.Browser
     state: present
 
+- name: Download codium
+  shell:
+    #This one-liner curls a response from github's api, greps the rpm download file link, cleans it up and then uses wget to download the file
+    cmd: curl -s https://api.github.com/repos/VSCodium/vscodium/releases/latest | egrep -i '"browser_download_url":.*x86_64.rpm"' | awk '{print $2}' | sed s/\"//g | xargs wget -qO ./codium.rpm
+
 - name: Install codium
-  flatpak:
-    name: com.vscodium.codium
+  dnf:
+    name: ./codium.rpm
     state: present
+
+- name: Remove codium.rpm
+  file:
+    path: ./codium.prm
+    state: absent
 
 - name: Install bitwarden
   flatpak:
