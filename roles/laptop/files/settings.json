@@ -1,0 +1,25 @@
+{
+    //Default built-in settings
+    "telemetry.telemetryLevel": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.fontFamily": "Fira Code",
+    "workbench.colorTheme": "Solarized Dark",
+    //Neovim extension
+    "editor.scrollBeyondLastLine": false,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    //Icon theme
+    "workbench.iconTheme": "material-icon-theme",
+    //All extensions
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    //Rust
+    "rust-analyzer.updates.askBeforeDownload": true,
+    //Easy format
+    "editor.formatOnSave": true,
+    //Redhat extensions
+    "redhat.telemetry.enabled": false,
+    //Since I mianly use yml in ansible
+    "files.associations": {
+        "*.yml": "ansible"
+    },
+}
