@@ -1,5 +1,5 @@
 # Set quick access app icons
-fav_apps: "['firefox.desktop', 'chromium-browser.desktop', 'com.brave.Browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'com.vscodium.codium.desktop', 'terminator.desktop', 'com.bitwarden.desktop.desktop']"
+fav_apps: "['firefox.desktop', 'chromium-browser.desktop', 'com.brave.Browser.desktop', 'org.gnome.Nautilus.desktop', 'nvim.desktop', 'vscodium.codium.desktop', 'terminator.desktop', 'com.bitwarden.desktop.desktop']"
 # Correct app picker
 app_picker: "[{'Utilities': <{'position': <0>}>, '8eeaefab-a137-42fd-8955-8dc0fec71115': <{'position': <1>}>, '1b429e6d-d77e-42bc-8d8e-2c7afd11f625': <{'position': <2>}>, 'org.gnome.Weather.desktop': <{'position': <3>}>, 'io.github.celluloid_player.Celluloid.desktop': <{'position': <4>}>, 'htop.desktop': <{'position': <5>}>}]"
 folder_children: "['Utilities', 'YaST', '8eeaefab-a137-42fd-8955-8dc0fec71115', '1b429e6d-d77e-42bc-8d8e-2c7afd11f625']"
@@ -18,7 +18,7 @@ folder3_apps: "['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection
 fira_font_package: fira-code-fonts
 jre: java-latest-openjdk
 jdk: java-latest-openjdk-devel
-codium: "flatpak run com.vscodium.codium --no-sandbox"
+codium: "codium --no-sandbox"
 go: go
 rust: rust
 go: go
